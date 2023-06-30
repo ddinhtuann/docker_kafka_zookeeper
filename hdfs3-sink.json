@@ -1,0 +1,15 @@
+{
+  "name": "hdfs3-sink",
+  "config": {
+    "connector.class": "io.confluent.connect.hdfs3.Hdfs3SinkConnector",
+    "tasks.max": "1",
+    "topics": "_bigdata",
+    "hdfs.url": "hdfs://10.0.68.37:9002",
+    "flush.size": "3",
+    "key.converter": "org.apache.kafka.connect.storage.StringConverter",
+    "value.converter": "io.confluent.connect.avro.AvroConverter",
+    "value.converter.schema.registry.url":"http://localhost:8081",
+    "confluent.topic.bootstrap.servers": "10.0.68.37:9092,10.0.68.100:9092,10.0.68.103:9092",
+    
+  }
+}
